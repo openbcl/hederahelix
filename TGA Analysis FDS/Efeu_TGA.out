@@ -1,0 +1,457 @@
+
+ Fire Dynamics Simulator
+
+ Current Date     : February 16, 2024  12:35:25
+ Revision         : FDS-6.8.0-0-g886e009-release
+ Revision Date    : Tue Apr 18 07:06:40 2023 -0400
+ Compiler         : ifort version 2021.7.1
+ Compilation Date : Apr 18, 2023 15:20:17
+
+ MPI Enabled;    Number of MPI Processes:       1
+ OpenMP Disabled
+
+ MPI version: 3.1
+ MPI library version: Intel(R) MPI Library 2021.6 for Linux* OS
+
+
+ Job TITLE        : TGA analysis of Schliebe 2023 data - Test 5
+ Job ID string    : Efeu_TGA
+
+
+ Grid Dimensions, Mesh     1
+
+   Cells in the X Direction             3
+   Cells in the Y Direction             1
+   Cells in the Z Direction             4
+   Number of Grid Cells                12
+
+
+ Physical Dimensions, Mesh     1
+
+   Length (m)                       4.000
+   Width  (m)                       1.000
+   Height (m)                       1.000
+   Initial Time Step (s)            0.200
+
+ Total Number of Grid Cells            12
+
+
+ Maximum Cell Aspect Ratio          5.333
+ CFL Velocity Norm                      1
+
+
+ Miscellaneous Parameters
+
+   Simulation Start Time (s)          0.0
+   Simulation End Time (s)         7200.0
+   Background Pressure (Pa)     101325.00
+   Ambient Temperature (C)          25.00
+
+   2D Cartesian
+   VLES Calculation
+   Eddy Viscosity Model:  Deardorff (C_DEARDORFF = 0.10)
+   Surface INERT Eddy Viscosity Model:  WALE (C_WALE = 0.60)
+   Surface leave Eddy Viscosity Model:  WALE (C_WALE = 0.60)
+   Turbulent Prandtl Number:         0.50
+   Turbulent Schmidt Number:         0.50
+
+
+ Pressure solver information
+
+   Solver:                            FFT
+   Velocity tolerance (m/s):    2.887E-01
+   Press eqn res tol (1/s^2):   6.000E+01
+   Max pressure iterations:            10
+
+
+ Background Stratification
+
+      Z (m)     P_0 (Pa)    TMP_0 (C)
+   ------------------------------------
+        0.88    101314.93     25.00
+        0.62    101317.80     25.00
+        0.38    101320.68     25.00
+        0.12    101323.56     25.00
+
+
+ Mass Fraction Transformation Matrix to Convert Species Mixtures (Columns) to Primitive Species (Rows)
+
+                         AIR       FUEL VAP  WATER VA  CARBON D
+   NITROGEN              0.760861  0.000000  0.000000  0.000000
+   OXYGEN                0.230510  0.000000  0.000000  0.000000
+   FUEL VAPOR            0.000000  1.000000  0.000000  0.000000
+   WATER VAPOR           0.008039  0.000000  1.000000  0.000000
+   CARBON DIOXIDE        0.000590  0.000000  0.000000  1.000000
+
+
+ Primitive Species Information
+
+   NITROGEN
+   Gas Species
+   Molecular Weight (g/mol)                28.01340
+   Ambient Density (kg/m^3)                1.145
+           Enthalpy of Formation (J/kg)  0.000E+00
+
+   OXYGEN
+   Gas Species
+   Molecular Weight (g/mol)                31.99880
+   Ambient Density (kg/m^3)                1.308
+           Enthalpy of Formation (J/kg)  0.000E+00
+
+   FUEL VAPOR
+   Gas Species
+   Molecular Weight (g/mol)                28.01340
+   Ambient Density (kg/m^3)                1.145
+   Assumed Enthalpy of Formation (J/kg)  3.097E+05
+
+   WATER VAPOR
+   Gas Species
+   Molecular Weight (g/mol)                18.01528
+   Ambient Density (kg/m^3)                0.736
+           Enthalpy of Formation (J/kg) -1.342E+07
+
+   CARBON DIOXIDE
+   Gas Species
+   Molecular Weight (g/mol)                44.00950
+   Ambient Density (kg/m^3)                1.799
+           Enthalpy of Formation (J/kg) -8.941E+06
+
+
+ Tracked (Lumped) Species Information
+
+   AIR
+   Molecular Weight (g/mol)            28.71586
+   Ambient Density (kg/m^3)            1.174
+   Initial Mass Fraction               1.000
+   Enthalpy of Formation (J/kg)     -1.132E+05
+
+   Sub Species                    Mass Fraction     Mole Fraction
+   NITROGEN                       7.608605E-01      7.799397E-01
+   OXYGEN                         2.305098E-01      2.068605E-01
+   WATER VAPOR                    8.039473E-03      1.281470E-02
+   CARBON DIOXIDE                 5.902165E-04      3.851117E-04
+ 
+     Viscosity (kg/m/s) Ambient,  298 K:  1.816E-05
+                                  500 K:  2.610E-05
+                                 1000 K:  4.124E-05
+                                 1500 K:  5.371E-05
+                                 2000 K:  6.476E-05
+   Therm. Cond. (W/m/K) Ambient,  298 K:  2.587E-02
+                                  500 K:  3.813E-02
+                                 1000 K:  6.690E-02
+                                 1500 K:  9.261E-02
+                                 2000 K:  1.155E-01
+        Enthalpy (J/kg) Ambient,  298 K: -1.132E+05
+                                  500 K:  9.439E+04
+                                 1000 K:  6.454E+05
+                                 1500 K:  1.245E+06
+                                 2000 K:  1.872E+06
+    Spec. Heat (J/kg/K) Ambient,  298 K:  1.018E+03
+                                  500 K:  1.044E+03
+                                 1000 K:  1.158E+03
+                                 1500 K:  1.232E+03
+                                 2000 K:  1.273E+03
+   Diff. Coeff. (m^2/s) Ambient,  298 K:  2.050E-05
+                                  500 K:  4.964E-05
+                                 1000 K:  1.582E-04
+                                 1500 K:  3.098E-04
+                                 2000 K:  4.989E-04
+ Gibbs Energy Amb. (kJ/mol),  298 K: -6.020E+01
+                                  500 K: -1.012E+02
+                                 1000 K: -2.122E+02
+                                 1500 K: -3.317E+02
+                                 2000 K: -4.573E+02
+
+   FUEL VAPOR
+   Molecular Weight (g/mol)            28.01340
+   Ambient Density (kg/m^3)            1.145
+   Initial Mass Fraction               0.000
+   Enthalpy of Formation (J/kg)      3.097E+05
+
+   Sub Species                    Mass Fraction     Mole Fraction
+   FUEL VAPOR                     1.000000E+00      1.000000E+00
+ 
+     Viscosity (kg/m/s) Ambient,  298 K:  1.761E-05
+                                  500 K:  2.512E-05
+                                 1000 K:  3.948E-05
+                                 1500 K:  5.136E-05
+                                 2000 K:  6.190E-05
+   Therm. Cond. (W/m/K) Ambient,  298 K:  2.577E-02
+                                  500 K:  3.675E-02
+                                 1000 K:  5.777E-02
+                                 1500 K:  7.515E-02
+                                 2000 K:  9.057E-02
+        Enthalpy (J/kg) Ambient,  298 K:  3.097E+05
+                                  500 K:  5.194E+05
+                                 1000 K:  1.039E+06
+                                 1500 K:  1.558E+06
+                                 2000 K:  2.078E+06
+    Spec. Heat (J/kg/K) Ambient,  298 K:  1.039E+03
+                                  500 K:  1.039E+03
+                                 1000 K:  1.039E+03
+                                 1500 K:  1.039E+03
+                                 2000 K:  1.039E+03
+   Diff. Coeff. (m^2/s) Ambient,  298 K:  2.045E-05
+                                  500 K:  4.934E-05
+                                 1000 K:  1.568E-04
+                                 1500 K:  3.070E-04
+                                 2000 K:  4.944E-04
+
+   WATER VAPOR
+   Molecular Weight (g/mol)            18.01528
+   Ambient Density (kg/m^3)            0.736
+   Initial Mass Fraction               0.000
+   Enthalpy of Formation (J/kg)     -1.342E+07
+
+   Sub Species                    Mass Fraction     Mole Fraction
+   WATER VAPOR                    1.000000E+00      1.000000E+00
+ 
+     Viscosity (kg/m/s) Ambient,  298 K:  1.069E-05
+                                  500 K:  1.770E-05
+                                 1000 K:  3.583E-05
+                                 1500 K:  5.206E-05
+                                 2000 K:  6.615E-05
+   Therm. Cond. (W/m/K) Ambient,  298 K:  1.993E-02
+                                  500 K:  3.460E-02
+                                 1000 K:  8.212E-02
+                                 1500 K:  1.367E-01
+                                 2000 K:  1.900E-01
+        Enthalpy (J/kg) Ambient,  298 K: -1.342E+07
+                                  500 K: -1.304E+07
+                                 1000 K: -1.198E+07
+                                 1500 K: -1.075E+07
+                                 2000 K: -9.369E+06
+    Spec. Heat (J/kg/K) Ambient,  298 K:  1.864E+03
+                                  500 K:  1.955E+03
+                                 1000 K:  2.292E+03
+                                 1500 K:  2.627E+03
+                                 2000 K:  2.873E+03
+   Diff. Coeff. (m^2/s) Ambient,  298 K:  2.166E-05
+                                  500 K:  5.775E-05
+                                 1000 K:  1.976E-04
+                                 1500 K:  3.947E-04
+                                 2000 K:  6.404E-04
+ Gibbs Energy Amb. (kJ/mol),  298 K: -2.981E+02
+                                  500 K: -3.382E+02
+                                 1000 K: -4.486E+02
+                                 1500 K: -5.696E+02
+                                 2000 K: -6.986E+02
+
+   CARBON DIOXIDE
+   Molecular Weight (g/mol)            44.00950
+   Ambient Density (kg/m^3)            1.799
+   Initial Mass Fraction               0.000
+   Enthalpy of Formation (J/kg)     -8.941E+06
+
+   Sub Species                    Mass Fraction     Mole Fraction
+   CARBON DIOXIDE                 1.000000E+00      1.000000E+00
+ 
+     Viscosity (kg/m/s) Ambient,  298 K:  1.509E-05
+                                  500 K:  2.346E-05
+                                 1000 K:  3.915E-05
+                                 1500 K:  5.140E-05
+                                 2000 K:  6.203E-05
+   Therm. Cond. (W/m/K) Ambient,  298 K:  1.697E-02
+                                  500 K:  3.172E-02
+                                 1000 K:  6.441E-02
+                                 1500 K:  9.091E-02
+                                 2000 K:  1.134E-01
+        Enthalpy (J/kg) Ambient,  298 K: -8.941E+06
+                                  500 K: -8.753E+06
+                                 1000 K: -8.183E+06
+                                 1500 K: -7.539E+06
+                                 2000 K: -6.864E+06
+    Spec. Heat (J/kg/K) Ambient,  298 K:  8.436E+02
+                                  500 K:  1.014E+03
+                                 1000 K:  1.234E+03
+                                 1500 K:  1.326E+03
+                                 2000 K:  1.371E+03
+   Diff. Coeff. (m^2/s) Ambient,  298 K:  1.566E-05
+                                  500 K:  3.885E-05
+                                 1000 K:  1.258E-04
+                                 1500 K:  2.472E-04
+                                 2000 K:  3.983E-04
+ Gibbs Energy Amb. (kJ/mol),  298 K: -4.572E+02
+                                  500 K: -5.026E+02
+                                 1000 K: -6.294E+02
+                                 1500 K: -7.701E+02
+                                 2000 K: -9.206E+02
+
+
+ Material Information
+
+   1 vegetation
+     Emissivity:                                  0.900
+     Density (kg/m3):                             375.0
+     Specific Heat (kJ/kg/K) Ambient,  298 K:  1.270E+00
+                                       350 K:  1.459E+00
+                                       500 K:  2.003E+00
+                                       800 K:  3.092E+00
+     Therm. Cond. (W/m/K) Ambient,     298 K:  1.100E-01
+                                       350 K:  1.100E-01
+                                       500 K:  1.100E-01
+                                       800 K:  1.100E-01
+     Enthalpy (kJ/kg) Ambient,         298 K:  1.141E+04
+                                       350 K:  1.148E+04
+                                       500 K:  1.174E+04
+                                       800 K:  1.250E+04
+     Reaction  1
+        Residue Yields:
+        CHAR                                                        :  0.388
+        Gaseous Yields:
+        AIR                                                         :  0.000
+        FUEL VAPOR                                                  :  0.612
+        WATER VAPOR                                                 :  0.000
+        CARBON DIOXIDE                                              :  0.000
+        A (1/s):                      4.999E+03
+        E (J/mol):                    7.550E+04
+        H_R (kJ/kg) TMP_REF,  616 K:  4.164E+02
+                              503 K:  5.553E+02
+                              730 K:  2.332E+02
+        N_S:                              1.00
+        N_T:                              0.00
+
+   2 MOISTURE
+     Emissivity:                                  0.900
+     Density (kg/m3):                            1000.0
+     Specific Heat (kJ/kg/K) Ambient,  298 K:  4.184E+00
+                                       350 K:  4.184E+00
+                                       500 K:  4.184E+00
+                                       800 K:  4.184E+00
+     Therm. Cond. (W/m/K) Ambient,     298 K:  6.200E-01
+                                       350 K:  6.200E-01
+                                       500 K:  6.200E-01
+                                       800 K:  6.200E-01
+     Enthalpy (kJ/kg) Ambient,         298 K: -1.595E+04
+                                       350 K: -1.573E+04
+                                       500 K: -1.510E+04
+                                       800 K: -1.385E+04
+     Reaction  1
+        Residue Yields:
+        Gaseous Yields:
+        AIR                                                         :  0.000
+        FUEL VAPOR                                                  :  0.000
+        WATER VAPOR                                                 :  1.000
+        CARBON DIOXIDE                                              :  0.000
+        A (1/s):                      2.947E+11
+        E (J/mol):                    1.079E+05
+        H_R (kJ/kg) TMP_REF,  413 K:  2.258E+03
+                              377 K:  2.340E+03
+                              448 K:  2.179E+03
+        N_S:                              1.00
+        N_T:                              0.00
+
+   3 CHAR
+     Emissivity:                                  0.900
+     Density (kg/m3):                             150.0
+     Specific Heat (kJ/kg/K) Ambient,  298 K:  7.150E-01
+                                       350 K:  7.540E-01
+                                       500 K:  8.711E-01
+                                       800 K:  1.105E+00
+     Therm. Cond. (W/m/K) Ambient,     298 K:  5.200E-02
+                                       350 K:  5.200E-02
+                                       500 K:  5.200E-02
+                                       800 K:  5.200E-02
+     Enthalpy (kJ/kg) Ambient,         298 K:  3.071E+04
+                                       350 K:  3.075E+04
+                                       500 K:  3.087E+04
+                                       800 K:  3.116E+04
+     Reaction  1
+        Residue Yields:
+        ASH                                                         :  0.229
+        Gaseous Yields:
+        AIR                                                         :  0.000
+        FUEL VAPOR                                                  :  0.771
+        WATER VAPOR                                                 :  0.000
+        CARBON DIOXIDE                                              :  0.000
+        A (1/s):                      7.980E+37
+        E (J/mol):                    5.481E+05
+        H_R (kJ/kg) TMP_REF,  718 K: -3.200E+04
+                              697 K: -3.200E+04
+                              739 K: -3.200E+04
+        N_S:                              1.00
+        N_T:                              0.00
+
+   4 ASH
+     Emissivity:                                  0.900
+     Density (kg/m3):                               5.0
+     Specific Heat (kJ/kg/K) Ambient,  298 K:  2.000E+00
+                                       350 K:  2.000E+00
+                                       500 K:  2.000E+00
+                                       800 K:  2.000E+00
+     Therm. Cond. (W/m/K) Ambient,     298 K:  1.000E-01
+                                       350 K:  1.000E-01
+                                       500 K:  1.000E-01
+                                       800 K:  1.000E-01
+     Enthalpy (kJ/kg) Ambient,         298 K: -7.376E+03
+                                       350 K: -7.272E+03
+                                       500 K: -6.972E+03
+                                       800 K: -6.372E+03
+
+
+ Surface Conditions
+
+   0 INERT (DEFAULT)
+
+   1 leave
+     Material List
+          1  vegetation
+          2  MOISTURE
+          3  CHAR
+          4  ASH
+     Layer  1
+        Thickness   (m):  0.00000
+        Density (kg/m3):  1103.34
+        vegetation, Mass fraction:    0.34
+        MOISTURE, Mass fraction:    0.66
+     Total surface density     0.001 kg/m2
+     Solid Phase Node, Layer, Coordinates(m):
+                    0      1       0.0000000
+                    1      1       0.0000010
+     Insulated Backing
+
+   2 OPEN
+     Passive Vent to Atmosphere
+
+   3 MIRROR
+     Symmetry Plane
+
+   4 INTERPOLATED
+
+   5 PERIODIC
+
+   6 HVAC
+
+   7 MASSLESS TRACER
+
+   8 DROPLET
+
+   9 MASSLESS TARGET
+
+  10 PERIODIC FLOW ONLY
+
+
+ Lagrangian Particle Classes
+
+   1 leave
+     SURFace ID: leave
+     # Reals: 113
+     # Integers: 30
+     # Logicals: 5
+
+
+ Cut-off Density and Temperature
+
+    Minimum Temperature:  -218.3 C
+    Maximum Temperature:  2726.8 C
+    Minimum Density:  1.174E-01 kg/m3
+    Maximum Density:  1.957E+01 kg/m3
+
+
+ Pressure Zone Information
+
+   1 Volume: 4.0000E+00 m³, Cells: 12, Mesh: 1, Indices: (3,1,4)
+ 
+ 
+
+STOP: FDS performed a TGA analysis only and finished successfully (CHID: Efeu_TGA)

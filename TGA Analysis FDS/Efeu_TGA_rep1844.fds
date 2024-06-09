@@ -1,0 +1,80 @@
+&HEAD CHID='Efeu_TGA', TITLE='TGA analysis of Schliebe 2023 data - Test 5' /
+
+&MESH IJK=3,1,4, XB=-2,2,-0.5,0.5,0,1 /
+
+&TIME T_END=7200., WALL_INCREMENT=1, DT=0.2 /
+
+&MISC TMPA=25., SOLID_PHASE_ONLY=F /
+
+&SPEC ID='FUEL VAPOR' / 
+&SPEC ID='WATER VAPOR' / 
+&SPEC ID='CARBON DIOXIDE' / 
+
+&SURF ID                        = 'leave'
+      MATL_ID                   = 'vegetation'
+      MOISTURE_FRACTION         = 1.942233111341678
+      SURFACE_VOLUME_RATIO      = 10000.
+      LENGTH                    = 0.0002
+      GEOMETRY                  = 'CYLINDRICAL'
+      TGA_ANALYSIS              = T
+      TGA_HEATING_RATE          = 5
+      TGA_FINAL_TEMPERATURE     = 800 /
+
+&MATL ID = 'vegetation'
+      DENSITY               = 375
+      CONDUCTIVITY          = 0.11
+      SPECIFIC_HEAT_RAMP    = 'cp_dry_veg'
+      N_REACTIONS           = 1
+      NU_SPEC               = 0.6119154584629788
+      SPEC_ID               = 'FUEL VAPOR'
+      NU_MATL               = 0.3880845415370212
+      MATL_ID               = 'CHAR'
+      HEAT_OF_REACTION      = 416.
+      REFERENCE_TEMPERATURE = 343.1180532155039
+      PYROLYSIS_RANGE       = 227.36972332497905 /
+
+&RAMP ID='cp_dry_veg', T= 0.,    F=1.18 /
+&RAMP ID='cp_dry_veg', T= 1000., F=4.81 /
+
+&MATL ID                    = 'MOISTURE'
+      DENSITY               = 1000.
+      CONDUCTIVITY          = 0.62
+      SPECIFIC_HEAT         = 4.184
+      N_REACTIONS           = 1
+      SPEC_ID               = 'WATER VAPOR'
+      NU_SPEC               = 1.
+      HEAT_OF_REACTION      = 2259.
+      REFERENCE_TEMPERATURE = 139.36902213195373
+      PYROLYSIS_RANGE       = 71.27015635989184 /
+
+&MATL ID                    = 'CHAR'
+      DENSITY               = 150.
+      CONDUCTIVITY          = 0.052
+      SPECIFIC_HEAT_RAMP    = 'cp_char'
+      N_REACTIONS           = 1
+      SPEC_ID               = 'FUEL VAPOR'
+      NU_SPEC               = 0.7708094342721382
+      MATL_ID               = 'ASH'
+      NU_MATL               = 0.22919056572786176
+      HEAT_OF_REACTION      = -32000.
+      REFERENCE_TEMPERATURE = 444.816689650594
+      PYROLYSIS_RANGE       = 42.51274907395055 /
+
+&RAMP ID='cp_char', T=   27, F=0.715 /
+&RAMP ID='cp_char', T= 1724, F=2.04 /
+
+&MATL ID            = 'ASH'
+      DENSITY       =  5.
+      CONDUCTIVITY  = 0.1
+      SPECIFIC_HEAT = 2.0 /
+
+&PART ID='leave', DRAG_COEFFICIENT=2.8, SAMPLING_FACTOR=1, SURF_ID='leave'
+      QUANTITIES='PARTICLE TEMPERATURE','PARTICLE MASS', STATIC=.TRUE., COLOR='FOREST GREEN' /
+
+&INIT PART_ID='leave', XYZ=0.0,0.0,0.125, N_PARTICLES_PER_CELL=1 /
+
+DUMP DT_DEVC=1., MASS_FILE=T /
+
+DEVC ID='PART_MASS', XYZ=0.0,0.0,0.125, QUANTITY='PARTICLE MASS', PART_ID='leave' /
+
+&TAIL /
